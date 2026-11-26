@@ -16,7 +16,6 @@
   .downloads { display: grid; gap: 12px; margin: 20px 0; }
   .dl { display: block; background: var(--card); border-radius: 14px; padding: 16px 18px; text-decoration: none; color: var(--text); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); }
   .dl strong { font-size: 19px; }
-  .soon { opacity: .6; }
   .dl span { display: block; color: var(--body); font-size: 15px; }
   ol li { margin-bottom: 6px; }
   .sums code { display: block; font-size: 13px; overflow-wrap: anywhere; color: var(--text); }
@@ -30,8 +29,8 @@
   <h2>1. Get the free helper for your computer</h2>
   <div class="downloads">
     <a class="dl" href="https://github.com/Entr0zy/sofamouse/releases/latest/download/SofaMouse-Helper-Windows.exe"><strong>Windows</strong><span>SofaMouse-Helper-Windows.exe · Windows 10 and 11 · no install needed</span></a>
-    <div class="dl soon"><strong>Mac with Apple silicon (M1 or newer)</strong><span>Coming soon · macOS 11 or newer</span></div>
-    <div class="dl soon"><strong>Mac with Intel</strong><span>Coming soon · macOS 11 or newer</span></div>
+    <a class="dl" href="https://github.com/Entr0zy/sofamouse/releases/latest/download/SofaMouse-Helper-mac.zip"><strong>Mac with Apple silicon (M1 or newer)</strong><span>SofaMouse-Helper-mac.zip · macOS 11 or newer</span></a>
+    <a class="dl" href="https://github.com/Entr0zy/sofamouse/releases/latest/download/SofaMouse-Helper-mac-intel.zip"><strong>Mac with Intel</strong><span>SofaMouse-Helper-mac-intel.zip · macOS 11 or newer</span></a>
   </div>
   <p><strong>Windows:</strong> open the file. If Windows SmartScreen says it doesn't recognise the app, choose <em>More info → Run anyway</em>. When Windows Firewall asks, allow SofaMouse Helper on <em>Private networks</em>.</p>
   <p><strong>Mac:</strong> unzip, move SofaMouse Helper to Applications and open it. If macOS says it can't check the app, open <em>System Settings → Privacy &amp; Security</em> and choose <em>Open Anyway</em>. Then allow SofaMouse Helper under <em>Accessibility</em> so it can move the pointer and type. The helper shows a button that takes you there.</p>
@@ -46,8 +45,10 @@
   <p>Can't see your computer in the list? Tap <em>Enter the laptop address yourself</em> and type the address the helper shows.</p>
 
   <h2>Checksums (SHA-256)</h2>
-  <p class="sums">To check a download is genuine, compare its SHA-256 with these. On Windows run <code style="display:inline">certutil -hashfile SofaMouse-Helper-Windows.exe SHA256</code>.</p>
+  <p class="sums">To check a download is genuine, compare its SHA-256 with these. On Windows run <code style="display:inline">certutil -hashfile SofaMouse-Helper-Windows.exe SHA256</code>, on Mac <code style="display:inline">shasum -a 256 SofaMouse-Helper-mac.zip</code>.</p>
   <p class="sums">SofaMouse-Helper-Windows.exe<code>d6d6b96eb4e46db528e7d64abed4170e394196a982008838ddf23bff117d3e0d</code></p>
+  <p class="sums">SofaMouse-Helper-mac.zip<code>f6ae45a3c3650360fc1c1506f685c1c30b20a12b038241887c7d2042cccc28ae</code></p>
+  <p class="sums">SofaMouse-Helper-mac-intel.zip<code>58021851432ad5698234829495b2bd0f8893e43c0273bd4533eff27bc927234e</code></p>
 
   <h2>Is it safe?</h2>
   <p>Yes. The PIN pairing uses SPAKE2, so nobody else on the Wi-Fi can learn the PIN, even by recording the traffic. Every keystroke and movement after that is encrypted with XChaCha20-Poly1305. There's no account and no server, and nothing leaves your network.</p>
