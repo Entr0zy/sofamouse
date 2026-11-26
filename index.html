@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SofaMouse Helper and Support</title>
+<style>
+  :root { --bg: #F3F7FC; --text: #071428; --body: #3C4C60; --accent: #1267B9; --card: #FFFFFF; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #030712; --text: #F9FAFB; --body: #A7B4C6; --accent: #38BDF8; --card: #0B1220; } }
+  body { margin: 0; background: var(--bg); color: var(--body); font: 17px/1.6 -apple-system, system-ui, sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1, h2 { color: var(--text); }
+  h1 { font-size: 34px; margin-bottom: 4px; }
+  h2 { font-size: 21px; margin-top: 32px; }
+  a { color: var(--accent); }
+  .downloads { display: grid; gap: 12px; margin: 20px 0; }
+  .dl { display: block; background: var(--card); border-radius: 14px; padding: 16px 18px; text-decoration: none; color: var(--text); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); }
+  .dl strong { font-size: 19px; }
+  .soon { opacity: .6; }
+  .dl span { display: block; color: var(--body); font-size: 15px; }
+  ol li { margin-bottom: 6px; }
+  .sums code { display: block; font-size: 13px; overflow-wrap: anywhere; color: var(--text); }
+</style>
+</head>
+<body>
+<main>
+  <h1>SofaMouse</h1>
+  <p>Use your phone as a keyboard, trackpad and air mouse for your computer from across the room. On iPhone it connects over your Wi-Fi to the free SofaMouse Helper, end-to-end encrypted.</p>
+
+  <h2>1. Get the free helper for your computer</h2>
+  <div class="downloads">
+    <a class="dl" href="https://github.com/Entr0zy/sofamouse/releases/latest/download/SofaMouse-Helper-Windows.exe"><strong>Windows</strong><span>SofaMouse-Helper-Windows.exe · Windows 10 and 11 · no install needed</span></a>
+    <div class="dl soon"><strong>Mac with Apple silicon (M1 or newer)</strong><span>Coming soon · macOS 11 or newer</span></div>
+    <div class="dl soon"><strong>Mac with Intel</strong><span>Coming soon · macOS 11 or newer</span></div>
+  </div>
+  <p><strong>Windows:</strong> open the file. If Windows SmartScreen says it doesn't recognise the app, choose <em>More info → Run anyway</em>. When Windows Firewall asks, allow SofaMouse Helper on <em>Private networks</em>.</p>
+  <p><strong>Mac:</strong> unzip, move SofaMouse Helper to Applications and open it. If macOS says it can't check the app, open <em>System Settings → Privacy &amp; Security</em> and choose <em>Open Anyway</em>. Then allow SofaMouse Helper under <em>Accessibility</em> so it can move the pointer and type. The helper shows a button that takes you there.</p>
+
+  <h2>2. Pair your phone (once)</h2>
+  <ol>
+    <li>Put the phone and the computer on the same Wi-Fi.</li>
+    <li>The helper shows a 6-digit PIN.</li>
+    <li>In SofaMouse, tap the status at the top → <em>Wi-Fi</em> → tap your computer → enter the PIN.</li>
+    <li>That's it. Next time SofaMouse reconnects by itself with no PIN.</li>
+  </ol>
+  <p>Can't see your computer in the list? Tap <em>Enter the laptop address yourself</em> and type the address the helper shows.</p>
+
+  <h2>Checksums (SHA-256)</h2>
+  <p class="sums">To check a download is genuine, compare its SHA-256 with these. On Windows run <code style="display:inline">certutil -hashfile SofaMouse-Helper-Windows.exe SHA256</code>.</p>
+  <p class="sums">SofaMouse-Helper-Windows.exe<code>d6d6b96eb4e46db528e7d64abed4170e394196a982008838ddf23bff117d3e0d</code></p>
+
+  <h2>Is it safe?</h2>
+  <p>Yes. The PIN pairing uses SPAKE2, so nobody else on the Wi-Fi can learn the PIN, even by recording the traffic. Every keystroke and movement after that is encrypted with XChaCha20-Poly1305. There's no account and no server, and nothing leaves your network.</p>
+
+  <h2>Common questions</h2>
+  <p><strong>Does it work with Bluetooth?</strong> On Android, SofaMouse can be a real Bluetooth keyboard and mouse with nothing to install. Apple doesn't let iPhone apps do that, so on iPhone it uses Wi-Fi and the helper.</p>
+  <p><strong>Forgetting a phone or computer.</strong> In the helper, tap <em>Forget</em> next to the phone. In the app, go to Settings → Paired computers → <em>Forget</em>.</p>
+  <p><strong>Something else?</strong> Email <a href="mailto:entrozy@protonmail.com">entrozy@protonmail.com</a> and you'll get a reply, usually within two days. Please say which phone and computer you use.</p>
+
+  <p><a href="privacy-policy.html">Privacy policy</a></p>
+</main>
+</body>
+</html>
